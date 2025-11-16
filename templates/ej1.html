@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Ejercicio 1: Promedio y Estado</h2>
+  <form method="POST">
+    <label>Nota 1:</label><input type="number" name="n1" min="10" max="70" required><br>
+    <label>Nota 2:</label><input type="number" name="n2" min="10" max="70" required><br>
+    <label>Nota 3:</label><input type="number" name="n3" min="10" max="70" required><br>
+    <label>Asistencia:</label><input type="number" name="asistencia" min="0" max="100" required><br>
+    <input type="submit" value="Enviar">
+  </form>
+
+  {% if resultado %}
+    {% if resultado.error %}
+      <p style="color:red">{{ resultado.error }}</p>
+    {% else %}
+      <p>Promedio: {{ resultado.promedio }}</p>
+      <p>Asistencia: {{ resultado.asistencia }}%</p>
+      <p>Estado: {{ resultado.estado }}</p>
+    {% endif %}
+  {% endif %}
+</body>
+</html>

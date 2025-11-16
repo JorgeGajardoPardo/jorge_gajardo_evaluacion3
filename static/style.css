@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0; padding: 20px;
+}
+h1, h2 { color: #333;}
+form { margin-top: 20px; }
+label { display: block; margin-top: 10px; }
+input { padding: 8px; margin-top: 5px; }
+button, input[type="submit"] {
+  background-color: #007bff; color: #fff;
+  border: none; padding: 10px 20px;
+  border-radius: 4px; cursor: pointer;
+
+}
+button:hover, input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
