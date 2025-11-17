@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <h2>Ejercicio 2: Nombre más largo</h2>
+
   <form method="POST">
     <label>Nombre 1:</label><input type="text" name="nom1" required><br>
     <label>Nombre 2:</label><input type="text" name="nom2" required><br>
@@ -16,8 +16,8 @@
   </form>
 
   {% if resultado %}
-    <p>Nombre más largo: {{ resultado.mayor }}</p>
-    <p>Cantidad de caracteres: {{ resultado.largo }}</p>
+    <p>Nombre con mayor cantidad de caracteres es: {{ resultado.mayor }}</p>
+    <p>El nombre tiene: {{ resultado.largo }} carácteres</p>
   {% endif %}
 </body>
 </html>
